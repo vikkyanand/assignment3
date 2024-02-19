@@ -1,0 +1,16 @@
+﻿@using assignment_3.Models
+@model List<UploadedData>
+
+<h1>Uploaded Data</h1>
+
+@foreach (var item in Model)
+{
+    <div>
+        <p>Text: @item.Text</p>
+        @if (!string.IsNullOrEmpty(item.ImageId.ToString()))
+        {
+            var imageIdString = item.ImageId.ToString(); // Convert ObjectId to string
+            <img src="@Url.Action("GetImage", "Upload", new { id = imageIdString })" alt="Uploaded Image" />
+        }
+    </div>
+}

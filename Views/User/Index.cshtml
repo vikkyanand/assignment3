@@ -1,0 +1,12 @@
+﻿@model List<UserInfo>
+
+<h1>User List</h1>
+
+<ul>
+    @foreach (var user in Model)
+    {
+        <li><a href="@Url.Action("Details", "User", new { name = user.Name })">@user.Name</a></li>
+    }
+</ul>
+
+<a href="@Url.Action("Create", "User")">Add User</a>

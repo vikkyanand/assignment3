@@ -1,0 +1,20 @@
+﻿@model UserEntry
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Privacy Page</title>
+</head>
+<body>
+    <h1>Welcome to the Privacy Page</h1>
+    @if (Model != null)
+    {
+        <p>Last entry logged: @Model.DateTime</p>
+        <p>IP Address: @Model.IpAddress</p>
+    }
+    else
+    {
+        <p>No entries logged yet.</p>
+    }
+</body>
+</html>

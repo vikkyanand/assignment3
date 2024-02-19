@@ -1,0 +1,15 @@
+﻿@model UserInfo
+
+<h1>Create User</h1>
+
+<form asp-action="Create">
+    <div>
+        <label asp-for="Name">Name:</label>
+        <input asp-for="Name" />
+    </div>
+    <div>
+        <label asp-for="Country">Country:</label>
+        <input asp-for="Country" />
+    </div>
+    <button type="submit">Submit</button>
+</form>
